@@ -11,8 +11,7 @@ public class Numbergame
         //Taking input for number from the user
         Scanner sc=new Scanner(System.in);
         System.out.print("Guess the number: ");
-        int g=sc.nextInt();
-        return g;   //returning user's guess
+        return sc.nextInt();    //returning user's guess
     }
     public void check()  //function to check and display whether the entered number is correct or not
     {
@@ -24,19 +23,17 @@ public class Numbergame
             if (x==num) //Checking if guessed number is correct
             {
                 System.out.println("Correct Number!");
-                count++;
                 return;
             }
             else if (x<num) //Checking if guessed number is less than actual number
             {
                 System.out.println("Number entered is too low!\n");
-                count++;
             }
             else if(x>num)  //Checking if the guessed number is greater than the actual number
             {
                 System.out.println("Number entered is too high!\n");
-                count++;
             }
+            count++;
         }
         System.out.println("YOU LOST!\nCorrect number was "+num+"\nTRY AGAIN LATER!");
     }
